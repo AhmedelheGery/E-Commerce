@@ -1,0 +1,75 @@
+<div class="form-container">
+    <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+              <img class="img-fluid" alt="Responsive image" src='assets/signup-img.svg'>
+          </div>
+          <form class="col-md-6" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <h1 class="text-center font-weight-bold text-white mb-3 display-4">Create an Account</h1>
+            <!-- USERNAME INPUT -->
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Username" formControlName="username">
+              <span class="help-block" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+                <span class="help-block" *ngIf="signupForm.get('username').errors['required']">
+                  This input is required !</span>
+              </span>
+            </div>
+            <!-- EMAIL INPUT -->
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="email" formControlName="email">
+              <span class="help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+                  <span class="help-block" *ngIf="signupForm.get('email').errors['required']">
+                    This input is required !
+                  </span>
+                  <span class="help-block" *ngIf="signupForm.get('email').errors['email']">
+                    This email is in-valid !
+                  </span>
+              </span>
+              
+            </div>
+            <!-- PASSWORD INPUT -->
+            <div class="form-group">
+              <input type="password" class="form-control" placeholder="password" formControlName="password">
+              <span
+               class="help-block"
+               *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched" >
+                <span *ngIf="signupForm.get('password').errors['required']"
+                class="help-block">This input is required !</span>
+                <span *ngIf="signupForm.get('password').errors['minlength']"
+                class="help-block">Your password should be at least 6 characters !</span>
+                <span *ngIf="signupForm.get('password').errors['maxlength']"
+                class="help-block">Your password shouldn't be more than 12 characters !</span>
+              </span>
+            </div>   
+            <!-- PHONE-NUMBER INPUT -->
+            <div class="form-group">
+              <input type="number" class="form-control" placeholder="Phone number" formControlName="phoneNumber">
+              <span class="help-block" *ngIf="!signupForm.get('phoneNumber').valid && signupForm.get('phoneNumber').touched">
+                  <span class="help-block" *ngIf="signupForm.get('phoneNumber').errors['required']">
+                    This input is required !</span>
+              </span>
+            </div>
+
+            <button 
+             class="btn btn-dark btn-block"
+             [disabled]="!signupForm.valid"
+             type="submit"
+             (click)="saveData()" >
+             Submit
+            </button>
+            
+            <div>
+                <p>Username is : {{ signupForm.value.username }}</p>
+                <p>email is : {{ signupForm.value.email }}</p>
+                <p>password is : {{ signupForm.value.password }}</p>
+                <p>number is : {{ signupForm.value.phoneNumber }}</p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+</div>
+
+
+<!-- routerLink="/profile" -->
+

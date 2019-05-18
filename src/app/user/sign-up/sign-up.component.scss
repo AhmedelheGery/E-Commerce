@@ -1,0 +1,25 @@
+$danger : #FF3547;
+$bgColor : rgb(203, 202, 211);
+
+
+.form-container{
+    background-color: $bgColor ;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+
+    input.ng-invalid.ng-touched{
+        border: 1px solid $danger;
+        margin-bottom: 0.3rem;
+
+    }
+    .help-block{
+        color: $danger !important;
+        font-size: 0.8rem;
+    }
+
+
+}
+

@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <h2 class="text-dark display-2">Welcome to your profile</h2>
+  <div class="row align-items-center">
+    <div class="col-md-6">
+        <ul>
+            <li> 
+              <h3 class="text-dark font-weight-bold d-inline">Your Name :</h3>
+              <span class="h4 text-primary">{{ userInfo.username }}</span>
+            </li>
+            <li>
+               <h3 class="text-dark font-weight-bold d-inline">Your Email :</h3>
+               <span class="h4 text-primary">{{ userInfo.email }}</span>
+            </li>
+            <li> 
+              <h3 class="text-dark font-weight-bold d-inline">Your Phone Number :</h3>
+              <span class="h4 text-primary">{{ userInfo.phoneNumber }}</span>   
+            </li>
+          </ul>
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="assets/signup-img.svg" alt="">
+    </div>
+  </div>
+
+</div>

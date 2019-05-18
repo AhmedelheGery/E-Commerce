@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container">
+      <div class="mb-2" *ngFor="let item of items">
+            <div class="card text-center" style="width: 8rem;">
+        <a> 
+             <img class="card-img-top" src="{{ item.imgPath }}" alt="{{item.name}}">
+        </a>
+          <div class="card-body">
+            <h5 class="card-title text-capitalize"> {{item.name}} </h5>
+            <p class="card-text font-weight-bold"> {{ item.price }} </p>
+          </div>
+      </div>
+      </div>
+</div>

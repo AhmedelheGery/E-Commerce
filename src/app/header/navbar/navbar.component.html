@@ -1,0 +1,32 @@
+  <!-- START NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark mb-5">
+    <div class="container">
+        <a class="navbar-brand text-light" routerLink ='/home'>AATROX</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" routerLink ='/home'>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink ='/cart'>
+                <i class="fas fa-shopping-cart text-white">
+                    <span class=" p-1 ml-1">{{ counter }}</span>
+               </i>
+            </a>
+            </li>
+          </ul>
+          <li class="nav-item sign-btn">
+            <a routerLink="/profile" class="d-flex align-items-center"><img src="assets/profile-link.svg" class="img-fluid" style="height:30px; width:30px;" alt=""> <span class="text-white">Profile</span></a>
+          </li>
+          <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <i class="fas fa-search nav-link text-white"></i>
+            <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+          </form>
+        </div>      
+    </div>
+  </nav>

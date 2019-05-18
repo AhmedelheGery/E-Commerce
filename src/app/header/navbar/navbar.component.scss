@@ -1,0 +1,20 @@
+nav{
+    background-color: rgb(151, 13, 59);
+    .sign-btn{
+        list-style: none;
+        button{
+            background-color: #47063d;
+        }
+    }
+    .navbar-nav{
+        margin: 0 auto;
+        .active{
+            a{
+                color: rgb(246, 250, 10);
+            }
+        }
+        li{
+            margin: 0 1rem;
+        }
+    }
+}
